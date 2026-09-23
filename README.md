@@ -1,12 +1,13 @@
-# NiceLock
+# NearLock
 
 A Windows 11 Bluetooth proximity lock, built with Python. Choose a device you carry, adjust its proximity settings, and let the app lock Windows when you walk away. A quiet, Apple-inspired desktop interface provides rounded cards, live signal history, device selection, and a system tray icon.
 
-[Source](https://github.com/naveenjujaray/NiceLock) · [Releases](https://github.com/naveenjujaray/NiceLock/releases) · [Report an issue](https://github.com/naveenjujaray/NiceLock/issues) · [GPLv3 license](LICENSE)
+[Source](https://github.com/naveenjujaray/NearLock) · [Releases](https://github.com/naveenjujaray/NearLock/releases) · [Report an issue](https://github.com/naveenjujaray/NearLock/issues) · [GPLv3 license](LICENSE)
 
-> **App naming:** this repository is named **NiceLock**. The current application, installer, tray menu, and settings folder use **Nearlock**. The filenames and instructions below match those builds.
+> **App naming:** this repository is named **NearLock**. The current application, installer, tray menu, and settings folder use **Nearlock**. The filenames and instructions below match those builds.
 
-**Windows unlock still requires Windows Hello, your PIN, or your password.** The app detects your return but does not unlock Windows automatically, store sign-in credentials, or bypass Windows authentication. Microsoft's [LockWorkStation documentation](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-lockworkstation) explains that unlocking requires the user to sign in.
+**Windows unlock still requires Windows Hello, your PIN, or
+ your password.** The app detects your return but does not unlock Windows automatically, store sign-in credentials, or bypass Windows authentication. Microsoft's [LockWorkStation documentation](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-lockworkstation) explains that unlocking requires the user to sign in.
 
 ## Features
 
@@ -31,7 +32,7 @@ A Windows 11 Bluetooth proximity lock, built with Python. Choose a device you ca
 
 ### Setup executable
 
-Use **Nearlock-Setup.exe** from a packaged [release](https://github.com/naveenjujaray/NiceLock/releases), when available, or [build it from source](#build-the-setup-executable). GitHub's automatically generated source ZIP is not the Windows installer.
+Use **Nearlock-Setup.exe** from a packaged [release](https://github.com/naveenjujaray/NearLock/releases), when available, or [build it from source](#build-the-setup-executable). GitHub's automatically generated source ZIP is not the Windows installer.
 
 1. If Nearlock is already running, right-click its tray icon and choose **Quit Nearlock**.
 2. Double-click **Nearlock-Setup.exe** using your normal Windows account.
@@ -107,8 +108,8 @@ Preferences are stored in `%LOCALAPPDATA%\Nearlock\settings.json`. Rotating `nea
 On Windows 11 x64, with Python 3.11+ and Git available:
 
 ```powershell
-git clone https://github.com/naveenjujaray/NiceLock.git
-cd NiceLock
+git clone https://github.com/naveenjujaray/NearLock.git
+cd NearLock
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe app.py
@@ -180,7 +181,7 @@ The existing build passed its automated checks, packaged UI check, live LE/Class
 | Closing the window appears to do nothing | The app remains in the system tray. Use **Quit Nearlock** to stop it. |
 | App does not start after sign-in | Check **Launch at sign-in** and Windows startup-app settings. If you moved a portable copy, toggle startup off and on again. |
 
-For other problems, [open an issue](https://github.com/naveenjujaray/NiceLock/issues) with your Windows version, Bluetooth adapter, device model, chosen transport, and steps to reproduce. Redact Bluetooth addresses and personal device names from shared logs.
+For other problems, [open an issue](https://github.com/naveenjujaray/NearLock/issues) with your Windows version, Bluetooth adapter, device model, chosen transport, and steps to reproduce. Redact Bluetooth addresses and personal device names from shared logs.
 
 ## Project files
 
@@ -198,6 +199,6 @@ For other problems, [open an issue](https://github.com/naveenjujaray/NiceLock/is
 
 Copyright (C) 2026 Naveen Jujaray.
 
-NiceLock, including the application currently named Nearlock, is licensed under the **GNU General Public License, version 3 only** (`GPL-3.0-only`). You may use, modify, and redistribute it under those terms. The software is provided without warranty. See [LICENSE](LICENSE) for the complete license text.
+NearLock, including the application currently named Nearlock, is licensed under the **GNU General Public License, version 3 only** (`GPL-3.0-only`). You may use, modify, and redistribute it under those terms. The software is provided without warranty. See [LICENSE](LICENSE) for the complete license text.
 
 Third-party dependencies retain their respective licenses.
