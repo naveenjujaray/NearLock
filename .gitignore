@@ -1,0 +1,10 @@
+.venv/
+.uv-cache/
+.pyinstaller-cache/
+.build-tools/
+__pycache__/
+build/
+dist/
+verification/
+*.zip
+Nearlock-Setup*.exe
